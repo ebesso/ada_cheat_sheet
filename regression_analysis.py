@@ -17,7 +17,7 @@ mod = smf.ols(formula='y ~ C(x1) * C(x2,  Treatment(reference=0)) + C(x3)', data
 res = mod.fit()
 print(res.summary())
 
-# We can later predict on other data
+# We can later predict on other data, but using scipy for prediction this might be better
 predictions = res.predict(new_data)
 
 ##############################################################################################################
@@ -30,7 +30,7 @@ mod = smf.logit(formula='y ~ C(x1) * C(x2,  Treatment(reference=0)) + C(x3)', da
 res = mod.fit()
 print(res.summary())
 
-# We can later predict on other data
+# We can later predict on other data, but using scipy for prediction this might be better
 predictions = res.predict(new_data)
 
 ##############################################################################################################
