@@ -91,6 +91,15 @@ for n in G.nodes:
 ###################################################################################################################
 # DRAW NETWORKS
 
+# Create subgraph based on an attribute
+rel_edges = []
+edges = nx.get_edge_attributes(G, 'attr')
+for e, a in edges.items():
+    if a == "something":
+        rel_edges.append(e)
+
+subG = G.subgraph(rel_edges)
+
 # https://networkx.github.io/documentation/stable/reference/drawing.html#module-networkx.drawing.layout
 nx.draw_spring(G, with_labels=True,  alpha = 0.8)
 

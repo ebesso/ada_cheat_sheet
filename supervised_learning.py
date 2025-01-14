@@ -76,7 +76,12 @@ KNN15.predict(X_test)
 
 # See supervised_learning exercise for a plotting helper function 
 
-
+##################################################################################################################
+# CHECK OUT THESE FUNCTION WHEN IN NEED
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn import preprocessing
+from sklearn.preprocessing import StandardScaler
+from sklearn.utils import shuffle
 
 
 
