@@ -51,7 +51,7 @@ y_pred = cross_val_predict(model, X, y, cv=5)
 # VALIDATION
 
 
-# TPR, FPR, Area Under Curve and Mean-Squared Error
+# TPR, FPR, Area Under Curve and Mean-Squared Error (YOU CAN FIND ANY SCORE)
 # https://scikit-learn.org/stable/api/sklearn.metrics.html
 from sklearn.metrics import mean_squared_error, auc, roc_curve, mean_absolute_error
 mse = mean_squared_error(y, y_pred)
@@ -77,11 +77,22 @@ KNN15.predict(X_test)
 # See supervised_learning exercise for a plotting helper function 
 
 ##################################################################################################################
+from sklearn.tree import DecisionTreeClassifier
+tree = DecisionTreeClassifier(random_state=42).fit(X_train, y_train)
+tree.predict(X_test, y_test)
+
+from sklearn.ensemble import RandomForestClassifier
+forest = RandomForestClassifier(random_state=42).fit(X_train, y_train)
+forest.predict(X_test, y_test)
+
+##################################################################################################################
 # CHECK OUT THESE FUNCTION WHEN IN NEED
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn import preprocessing
 from sklearn.preprocessing import StandardScaler
 from sklearn.utils import shuffle
+
+
 
 
 
